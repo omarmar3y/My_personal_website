@@ -1,6 +1,7 @@
 :root {
   --mouse-x:0px;
   --mouse-y:0px;
+  --delay-time:0;
 }
 
 * {
@@ -203,6 +204,7 @@ header ul li a:hover {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 .projects .cards:hover .card .border {
   opacity: 1;
@@ -211,10 +213,14 @@ header ul li a:hover {
   width: 300px;
   height: 260px;
   border-radius: 12px;
+  transition: 1s;
+  transition-delay: var(--delay-time);
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.1);
   position: relative;
   z-index: 1;
+  transform: translateY(1000px);
+  opacity: 0;
 }
 .projects .cards .card::before, .projects .cards .card .border {
   background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.07), transparent 40%);
@@ -244,6 +250,21 @@ header ul li a:hover {
   margin: 1px;
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+.projects .cards .card .content img {
+  height: 60%;
+  margin-top: 6px;
+  margin-bottom: 0.8em;
+}
+.projects .cards .card .content .content-title {
+  font-weight: 800;
+  margin-left: 0.8em;
+  margin-bottom: 0.8em;
+}
+.projects .cards .card .content .content-text {
+  margin-left: 0.8em;
 }
 
 .contact {
@@ -292,6 +313,7 @@ header ul li a:hover {
   margin-left: 3rem;
   font-weight: 800;
   font-size: 2.5rem;
+  margin-bottom: 5em;
 }
 .contact .call-me span {
   color: #6492BD;
@@ -392,6 +414,11 @@ header ul li a:hover {
   bottom: -0.8em;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.scrolled {
+  transform: translatey(0px) !important;
+  opacity: 1 !important;
 }
 
 @-webkit-keyframes bounce {

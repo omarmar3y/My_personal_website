@@ -13,6 +13,7 @@ $text-color:white;
 :root{
     --mouse-x:0px;
     --mouse-y:0px;
+    --delay-time:0;
 }
 
 * {
@@ -213,27 +214,30 @@ header {
     color: $text-color;
     background-color: rgb(10,10,10);
     .cards {
-        &:hover .card .border{
-            opacity: 1;
-        }
-
         max-width: 930px;
         width: calc(100% - 30px);
         margin: 2em auto;
         justify-content: center;
-        
         // height: fit-content;
         display: flex;
         gap: 10px;
         flex-wrap: wrap;
+        overflow: hidden;
+        &:hover .card .border{
+            opacity: 1;
+        }
         .card {
             width:300px ;
             height:  260px;
             border-radius: 12px;
+            transition: 1s ;
+            transition-delay: var(--delay-time);
             cursor: pointer;
             background-color: rgba(255, 255, 255, 0.1);
             position: relative;
             z-index: 1;
+            transform: translateY(1000px);
+            opacity: 0;
             &::before, .border{
                 background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
                 rgba(255,255,255,0.07),
@@ -267,7 +271,22 @@ header {
                 margin: 1px;
                 position: relative;
                 z-index: 2;
+                display: flex;
+                flex-direction: column;
 
+                img {
+                    height: 60%;
+                    margin-top:6px ;
+                    margin-bottom: 0.8em;
+                }
+                .content-title {
+                    font-weight: 800;
+                    margin-left: 0.8em;
+                    margin-bottom: 0.8em;
+                }
+                .content-text {
+                    margin-left: 0.8em;
+                }
             }
         }
 
@@ -393,6 +412,7 @@ header {
         margin-left: 3rem;
         font-weight: 800;
         font-size: 2.5rem;
+        margin-bottom: 5em;
         span{
             color: $logo-color;
             font-size: 1.1rem  ;
@@ -492,6 +512,12 @@ header {
             left: 50%;
             transform: translateX(-50%);
         }
+}
+
+.scrolled{
+    transform: translatey(0px) !important;
+    opacity: 1 !important;
+
 }
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
