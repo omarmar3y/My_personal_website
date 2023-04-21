@@ -304,8 +304,10 @@ header .menu_button.on_menu .menu_button_line.botm {
 }
 .projects .cards .card .content img {
   height: 60%;
-  margin-top: 6px;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
   margin-bottom: 0.8em;
+  filter: opacity(0.85);
 }
 .projects .cards .card .content .content-title {
   font-weight: 800;
@@ -343,6 +345,8 @@ header .menu_button.on_menu .menu_button_line.botm {
   align-self: center;
 }
 .contact .mail {
+  position: relative;
+  z-index: 6;
   margin-left: 3rem;
   margin-top: 3em;
 }
@@ -359,6 +363,8 @@ header .menu_button.on_menu .menu_button_line.botm {
   font-size: 1.4em;
 }
 .contact .call-me {
+  position: relative;
+  z-index: 6;
   margin-left: 3rem;
   font-weight: 800;
   font-size: 2.5rem;
@@ -412,7 +418,7 @@ header .menu_button.on_menu .menu_button_line.botm {
   right: 50%;
   transform: translateX(50%);
   text-align: center;
-  z-index: 6666;
+  z-index: 6;
 }
 
 .btn {

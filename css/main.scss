@@ -319,8 +319,11 @@ header {
 
 				img {
 					height: 60%;
-					margin-top: 6px;
+					border-top-left-radius: inherit;
+					border-top-right-radius: inherit;
 					margin-bottom: 0.8em;
+					filter: opacity(0.85);
+					// border-radius: inherit;
 				}
 				.content-title {
 					font-weight: 800;
@@ -433,6 +436,8 @@ header {
 		align-self: center;
 	}
 	.mail {
+		position: relative;
+		z-index: 6;
 		margin-left: 3rem;
 		margin-top: 3em;
 		a {
@@ -449,6 +454,8 @@ header {
 		font-size: 1.4em;
 	}
 	.call-me {
+		position: relative;
+		z-index: 6;
 		margin-left: 3rem;
 		font-weight: 800;
 		font-size: 2.5rem;
@@ -500,7 +507,7 @@ header {
 			right: 50%;
 			transform: translateX(50%);
 			text-align: center;
-			z-index: 6666;
+			z-index: 6;
 		}
 	}
 }
