@@ -313,6 +313,7 @@ header .menu_button.on_menu .menu_button_line.botm {
   font-weight: 800;
   margin-left: 0.8em;
   margin-bottom: 0.8em;
+  text-transform: capitalize;
 }
 .projects .cards .card .content .content-text {
   margin-left: 0.8em;
@@ -521,15 +522,32 @@ header .menu_button.on_menu .menu_button_line.botm {
   .intro .intro-image {
     display: none;
   }
+  .about-me .sup-title {
+    text-align: center;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+  .about-me .know-me {
+    text-align: center;
+    padding-left: 0px !important;
+  }
   .skills-container {
     flex-direction: column;
     max-width: 80%;
   }
   .skills-container .btn {
     padding: 0.5em 1.1em;
+    margin-left: 0px;
+    margin: 1em auto;
   }
   .skills-container .skills {
     margin-bottom: 3em;
+  }
+  .contact .mail {
+    margin: auto;
+  }
+  .contact .contact-para {
+    text-align: center;
   }
 }
 @-webkit-keyframes bounce {

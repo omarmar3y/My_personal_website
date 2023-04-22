@@ -329,6 +329,7 @@ header {
 					font-weight: 800;
 					margin-left: 0.8em;
 					margin-bottom: 0.8em;
+					text-transform: capitalize;
 				}
 				.content-text {
 					margin-left: 0.8em;
@@ -618,16 +619,36 @@ header {
 			display: none;
 		}
 	}
-
+	.about-me {
+		.sup-title {
+			text-align: center;
+			margin-left: 0.5em;
+			margin-right: 0.5em;
+		}
+		.know-me {
+			text-align: center;
+			padding-left: 0px !important;
+		}
+	}
 	.skills-container {
 		flex-direction: column;
 		max-width: 80%;
 
 		.btn {
 			padding: 0.5em 1.1em;
+			margin-left: 0px;
+			margin: 1em auto;
 		}
 		.skills {
 			margin-bottom: 3em;
+		}
+	}
+	.contact {
+		.mail {
+			margin: auto;
+		}
+		.contact-para {
+			text-align: center;
 		}
 	}
 }
