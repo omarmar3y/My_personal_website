@@ -244,6 +244,10 @@ header .menu_button.on_menu .menu_button_line.botm {
   color: white;
   background-color: rgb(10, 10, 10);
 }
+.projects a {
+  color: inherit;
+  text-decoration: none;
+}
 .projects .cards {
   max-width: 930px;
   width: calc(100% - 30px);
@@ -518,6 +522,9 @@ header .menu_button.on_menu .menu_button_line.botm {
   }
   header nav ul li:not(:last-child) {
     border-bottom: 1px rgba(255, 255, 255, 0.208) solid;
+  }
+  .intro .intro-para {
+    width: 80%;
   }
   .intro .intro-image {
     display: none;
